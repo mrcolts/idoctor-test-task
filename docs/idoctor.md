@@ -115,7 +115,7 @@ Content-Type: application/json
 
 #### Запрос
 ###### Url
-https://idoctor-test-task.mrcolt.com/api/v1/skills
+https://idoctor-test-task.mrcolt.com/api/v1/doctors
 
 ###### Headers
 Content-Type: application/json
