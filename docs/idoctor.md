@@ -65,7 +65,7 @@ Content-Type: application/json
         pagination - required|object
             totalRows - required|integer
             perPage - required|integer
-            currentPage - required|boolean
+            currentPage - required|integer
             totalPages - required|integer
     success - required|string
     message - reuiqred|string
@@ -168,7 +168,7 @@ Content-Type: application/json
         pagination - required|object
             totalRows - required|integer
             perPage - required|integer
-            currentPage - required|boolean
+            currentPage - required|integer
             totalPages - required|integer
     success - required|string
     message - reuiqred|string
