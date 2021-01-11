@@ -5,7 +5,9 @@ namespace App\Exceptions;
 use App\Core\Traits\ResponseTrait;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\TooManyRequestsHttpException;
 
 class Handler extends ExceptionHandler
@@ -34,10 +36,10 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Exception  $exception
+     * @param Exception $exception
      * @return void
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function report(Exception $exception)
     {
@@ -47,11 +49,11 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @param Request $request
+     * @param Exception $exception
+     * @return Response
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function render($request, Exception $exception)
     {
@@ -65,7 +67,7 @@ class Handler extends ExceptionHandler
 
         if ($exception instanceof ValidationException) {
             $validation_messages = $exception->validator->getMessageBag()->getMessages();
-            $validation_messages = array_map(static fn ($message) => $message[0], $validation_messages);
+            $validation_messages = array_map(static fn($message) => $message[0], $validation_messages);
             return $this->error('Validation failure', $validation_messages, 400);
         }
 

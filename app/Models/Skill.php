@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Core\Traits\Uuid;
-use App\ModelFilters\DoctorFilter;
 use App\ModelFilters\SkillFilter;
 use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\Builder;

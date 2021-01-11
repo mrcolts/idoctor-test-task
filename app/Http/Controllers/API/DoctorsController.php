@@ -7,7 +7,6 @@ namespace App\Http\Controllers\API;
 use App\Core\Services\DoctorsService;
 use App\Http\Requests\DoctorsIndexRequest;
 use App\Http\Requests\PaginateListRequest;
-use Illuminate\Http\Request;
 
 class DoctorsController
 {

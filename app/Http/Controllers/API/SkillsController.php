@@ -4,12 +4,9 @@
 namespace App\Http\Controllers\API;
 
 
-use App\Core\Services\DoctorsService;
 use App\Core\Services\SkillsService;
-use App\Http\Requests\DoctorsIndexRequest;
 use App\Http\Requests\PaginateListRequest;
 use App\Http\Requests\SkillsIndexRequest;
-use Illuminate\Http\Request;
 
 class SkillsController
 {

@@ -1,11 +1,10 @@
 <?php
 
 
-namespace App\Http\Controllers\API;
+namespace App\Core\Services;
 
 
 use App\Core\Traits\ResponseTrait;
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\JsonResponse;
 
 class BaseService
@@ -24,10 +23,10 @@ class BaseService
         $paginated = [
             'result' => $resource::collection($result),
             'pagination' => [
-                'totalRows'   => $result->total(),
-                'perPage'     => $result->perPage(),
+                'totalRows' => $result->total(),
+                'perPage' => $result->perPage(),
                 'currentPage' => $result->currentPage(),
-                'totalPages'  => $result->lastPage()
+                'totalPages' => $result->lastPage()
             ],
         ];
 

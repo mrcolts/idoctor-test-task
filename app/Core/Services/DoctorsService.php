@@ -4,13 +4,10 @@
 namespace App\Core\Services;
 
 
-use App\Core\Facades\IDoctorFacade;
-use App\Http\Controllers\API\BaseService;
 use App\Http\Requests\DoctorsIndexRequest;
 use App\Http\Requests\PaginateListRequest;
 use App\Http\Resources\DoctorsIndexResource;
 use App\Models\Doctor;
-use Illuminate\Http\Request;
 
 
 final class DoctorsService extends BaseService
