@@ -4,7 +4,6 @@
 namespace App\Core\Services;
 
 
-use App\Http\Controllers\API\BaseService;
 use App\Http\Requests\PaginateListRequest;
 use App\Http\Requests\SkillsIndexRequest;
 use App\Http\Resources\SkillsIndexResource;
